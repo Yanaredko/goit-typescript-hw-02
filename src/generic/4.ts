@@ -7,12 +7,12 @@ interface ComponentProps {
   
 }
 
-class Component<T extends ComponentProps> {
+class Component<T> {
   constructor(public props: T) {}
 }
 
 class Page extends Component<ComponentProps> {
-  pageInfo() {
+  pageInfo(): void {
     console.log(this.props.title);
   }
 }
